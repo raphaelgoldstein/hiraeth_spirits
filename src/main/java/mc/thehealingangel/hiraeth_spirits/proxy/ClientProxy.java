@@ -27,10 +27,10 @@ public class ClientProxy extends CommonProxy
         Map<String, RenderPlayer> skinMap = Minecraft.getMinecraft().getRenderManager().getSkinMap();
 
         RenderPlayer render = skinMap.get("default");
-        render.addLayer(new LayerHiraethSpirits());
+        render.addLayer(new LayerHiraethSpirits(render.getMainModel().bipedHead));
 
         render = skinMap.get("slim");
-        render.addLayer(new LayerHiraethSpirits());
+        render.addLayer(new LayerHiraethSpirits(render.getMainModel().bipedHead));
     }
 
     public void postInit(FMLPostInitializationEvent event)

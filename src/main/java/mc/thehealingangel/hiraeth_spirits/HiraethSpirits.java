@@ -12,21 +12,17 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.relauncher.Side;
 
-@Mod(modid = HiraethSpirits.MOD_ID, name = HiraethSpirits.NAME, version = HiraethSpirits.VERSION, canBeDeactivated = true,
-     acceptableRemoteVersions = "*")
+@Mod(modid = HiraethSpirits.MOD_ID, name = HiraethSpirits.NAME, version = HiraethSpirits.VERSION, acceptableRemoteVersions = "*")
 public class HiraethSpirits
 {
     public static final String MOD_ID = "hiraeth_spirits";
     public static final String NAME = "Hiraeth Spirits";
-    public static final String VERSION = "1.0";
+    public static final String VERSION = "1.1";
 
     public static final String COMMON_PROXY = "mc.thehealingangel.hiraeth_spirits.proxy.CommonProxy";
     public static final String CLIENT_PROXY = "mc.thehealingangel.hiraeth_spirits.proxy.ClientProxy";
 
     public static final SimpleNetworkWrapper NETWORK_CHANNEL = NetworkRegistry.INSTANCE.newSimpleChannel(HiraethSpirits.MOD_ID);
-
-    @Mod.Instance
-    public static HiraethSpirits instance;
 
     @SidedProxy(clientSide = CLIENT_PROXY, serverSide = COMMON_PROXY, modId = MOD_ID)
     public static CommonProxy proxy;
